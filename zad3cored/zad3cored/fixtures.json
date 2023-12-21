@@ -1,0 +1,17 @@
+
+[
+    {
+        "category": "Vegetables",
+        "products": [
+            {"name": "Potato", "price": 0.35},
+            {"name": "Carrot", "price": 0.50}
+        ]
+    },
+    {
+        "category": "Fruit",
+        "products": [
+            {"name": "Banana", "price": 0.35},
+            {"name": "Apple", "price": 1.05}
+        ]
+    }
+]
