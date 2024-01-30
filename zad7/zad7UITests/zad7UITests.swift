@@ -9,33 +9,88 @@ import XCTest
 
 final class zad7UITests: XCTestCase {
 
+    var app: XCUIApplication!
+
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
+        app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
+    func testProductListScrolling() throws {
+        let productList = app.tables["productListIdentifier"]
+        productList.swipeUp()
+    }
+
+    func testProductDetailsDisplay() throws {
+        let productCell = app.tables["productListIdentifier"].cells.firstMatch
+        productCell.tap()
+        XCTAssertTrue(app.staticTexts["Nazwa:"].exists)
+        XCTAssertTrue(app.staticTexts["Kategoria:"].exists)
+        XCTAssertTrue(app.staticTexts["Cena:"].exists)
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+    }
+
+    func testAddMultipleProductsToCart() throws {
+        let productCells = app.tables.cells
+        let addToCartButton = app.buttons["Do koszyka"]
+
+        for index in 0..<productCells.count {
+            let productCell = productCells.element(boundBy: index)
+            productCell.tap()
+            addToCartButton.tap()
+            app.navigationBars.buttons.element(boundBy: 0).tap()
         }
+        let goToCartElement = app.otherElements["Przejdź do koszyka"]
+        XCTAssertTrue(goToCartElement.exists)
+        goToCartElement.tap()
+        XCTAssertEqual(app.tables.cells.count, productCells.count)
+    }
+
+    func testAddToCartFromProductList() throws {
+        let addToCartButton = app.buttons.element(boundBy: 0)
+        addToCartButton.tap()
+        let goToCartElement = app.otherElements["Przejdź do koszyka"]
+        XCTAssertTrue(goToCartElement.exists)
+        goToCartElement.tap()
+        XCTAssertEqual(app.tables.cells.count, 1)
+    }
+
+    func testNavigateToPaymentView() throws {
+        let addToCartButton = app.buttons.element(boundBy: 0)
+        addToCartButton.tap()
+        let goToCartElement = app.otherElements["Przejdź do koszyka"]
+        goToCartElement.tap()
+
+        XCTAssertTrue(app.staticTexts["Koszyk"].exists)
+        XCTAssertTrue(app.staticTexts["Suma:"].exists)
+        XCTAssertTrue(app.buttons["Złóż zamówienie"].exists)
+    }
+
+    func testPaymentSuccess() throws {
+        let addToCartButton = app.buttons.element(boundBy: 0)
+        addToCartButton.tap()
+        let goToCartElement = app.otherElements["Przejdź do koszyka"]
+        XCTAssertTrue(goToCartElement.exists)
+        goToCartElement.tap()
+        app.buttons["Złóż zamówienie"].tap()
+        XCTAssertTrue(app.alerts["Sukces"].exists)
+        XCTAssertTrue(app.alerts["Płatność zakończona sukcesem."].exists)
+        app.alerts["Sukces"].buttons["OK"].tap()
+    }
+
+    func testPaymentFailure() throws {
+        let addToCartButton = app.buttons.element(boundBy: 0)
+        addToCartButton.tap()
+        let goToCartElement = app.otherElements["Przejdź do koszyka"]
+        XCTAssertTrue(goToCartElement.exists)
+        goToCartElement.tap()
+        app.textFields["Numer karty"].typeText("1234567812345670")
+        app.textFields["Data ważności"].typeText("12/24")
+        app.textFields["CVV"].typeText("123")
+        app.buttons["Zapłać"].tap()
+        XCTAssertTrue(app.alerts["Błąd płatności"].exists)
+        XCTAssertTrue(app.alerts["Wystąpił błąd podczas przetwarzania płatności:"].exists)
+        app.alerts["Błąd płatności"].buttons["OK"].tap()
     }
 }

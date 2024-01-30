@@ -7,8 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D0793BD12B697E9D002F1A4B /* zad7App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0793BD02B697E9D002F1A4B /* zad7App.swift */; };
-		D0793BD32B697E9D002F1A4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0793BD22B697E9D002F1A4B /* ContentView.swift */; };
+		D05E30892B69A9F700CD3602 /* zad7App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E30882B69A9F700CD3602 /* zad7App.swift */; };
+		D05E308A2B69A9F700CD3602 /* zad7App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E30882B69A9F700CD3602 /* zad7App.swift */; };
+		D05E308B2B69A9F700CD3602 /* zad7App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E30882B69A9F700CD3602 /* zad7App.swift */; };
+		D05E308D2B69AA0600CD3602 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E308C2B69AA0600CD3602 /* ContentView.swift */; };
+		D05E308E2B69AA0600CD3602 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E308C2B69AA0600CD3602 /* ContentView.swift */; };
+		D05E308F2B69AA0600CD3602 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E308C2B69AA0600CD3602 /* ContentView.swift */; };
+		D05E30912B69AA2500CD3602 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E30902B69AA2500CD3602 /* PaymentView.swift */; };
+		D05E30922B69AA2500CD3602 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E30902B69AA2500CD3602 /* PaymentView.swift */; };
+		D05E30932B69AA2500CD3602 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E30902B69AA2500CD3602 /* PaymentView.swift */; };
+		D05E30952B69AA4600CD3602 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E30942B69AA4600CD3602 /* CheckoutView.swift */; };
+		D05E30962B69AA4600CD3602 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E30942B69AA4600CD3602 /* CheckoutView.swift */; };
+		D05E30972B69AA4600CD3602 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E30942B69AA4600CD3602 /* CheckoutView.swift */; };
+		D05E30992B69AA5900CD3602 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E30982B69AA5900CD3602 /* Models.swift */; };
+		D05E309A2B69AA5900CD3602 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E30982B69AA5900CD3602 /* Models.swift */; };
+		D05E309B2B69AA5900CD3602 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E30982B69AA5900CD3602 /* Models.swift */; };
 		D0793BD52B697EAE002F1A4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0793BD42B697EAE002F1A4B /* Assets.xcassets */; };
 		D0793BD82B697EAE002F1A4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0793BD72B697EAE002F1A4B /* Preview Assets.xcassets */; };
 		D0793BE22B697EAE002F1A4B /* zad7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0793BE12B697EAE002F1A4B /* zad7Tests.swift */; };
@@ -34,9 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D05E30882B69A9F700CD3602 /* zad7App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zad7App.swift; sourceTree = "<group>"; };
+		D05E308C2B69AA0600CD3602 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D05E30902B69AA2500CD3602 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
+		D05E30942B69AA4600CD3602 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		D05E30982B69AA5900CD3602 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		D0793BCD2B697E9D002F1A4B /* zad7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zad7.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0793BD02B697E9D002F1A4B /* zad7App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zad7App.swift; sourceTree = "<group>"; };
-		D0793BD22B697E9D002F1A4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D0793BD42B697EAE002F1A4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0793BD72B697EAE002F1A4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D0793BDD2B697EAE002F1A4B /* zad7Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zad7Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,10 +110,13 @@
 		D0793BCF2B697E9D002F1A4B /* zad7 */ = {
 			isa = PBXGroup;
 			children = (
-				D0793BD02B697E9D002F1A4B /* zad7App.swift */,
-				D0793BD22B697E9D002F1A4B /* ContentView.swift */,
 				D0793BD42B697EAE002F1A4B /* Assets.xcassets */,
 				D0793BD62B697EAE002F1A4B /* Preview Content */,
+				D05E30882B69A9F700CD3602 /* zad7App.swift */,
+				D05E308C2B69AA0600CD3602 /* ContentView.swift */,
+				D05E30902B69AA2500CD3602 /* PaymentView.swift */,
+				D05E30942B69AA4600CD3602 /* CheckoutView.swift */,
+				D05E30982B69AA5900CD3602 /* Models.swift */,
 			);
 			path = zad7;
 			sourceTree = "<group>";
@@ -195,6 +214,7 @@
 				TargetAttributes = {
 					D0793BCC2B697E9D002F1A4B = {
 						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
 					};
 					D0793BDC2B697EAE002F1A4B = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -257,8 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0793BD32B697E9D002F1A4B /* ContentView.swift in Sources */,
-				D0793BD12B697E9D002F1A4B /* zad7App.swift in Sources */,
+				D05E308D2B69AA0600CD3602 /* ContentView.swift in Sources */,
+				D05E30912B69AA2500CD3602 /* PaymentView.swift in Sources */,
+				D05E30952B69AA4600CD3602 /* CheckoutView.swift in Sources */,
+				D05E30892B69A9F700CD3602 /* zad7App.swift in Sources */,
+				D05E30992B69AA5900CD3602 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +290,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0793BE22B697EAE002F1A4B /* zad7Tests.swift in Sources */,
+				D05E30922B69AA2500CD3602 /* PaymentView.swift in Sources */,
+				D05E30962B69AA4600CD3602 /* CheckoutView.swift in Sources */,
+				D05E309A2B69AA5900CD3602 /* Models.swift in Sources */,
+				D05E308A2B69A9F700CD3602 /* zad7App.swift in Sources */,
+				D05E308E2B69AA0600CD3602 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +303,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0793BEE2B697EAE002F1A4B /* zad7UITestsLaunchTests.swift in Sources */,
+				D05E308B2B69A9F700CD3602 /* zad7App.swift in Sources */,
+				D05E30972B69AA4600CD3602 /* CheckoutView.swift in Sources */,
+				D05E308F2B69AA0600CD3602 /* ContentView.swift in Sources */,
+				D05E30932B69AA2500CD3602 /* PaymentView.swift in Sources */,
 				D0793BEC2B697EAE002F1A4B /* zad7UITests.swift in Sources */,
+				D05E309B2B69AA5900CD3602 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"zad7/Preview Content\"";
@@ -437,6 +471,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = uj.zad7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -447,6 +482,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"zad7/Preview Content\"";
